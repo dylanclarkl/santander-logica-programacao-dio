@@ -18,7 +18,7 @@ Para elevar o nível do portfólio no GitHub, o desafio foi expandido para uma *
 ## 🎨 Layout & Visualização
 
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=900&auto=format&fit=crop" width="100%" alt="Ambiente de desenvolvimento e interface de jogos">
+  <img src="img.png" width="100%" alt="Tela do Sistema">
 </p>
 
 A interface foi desenvolvida utilizando uma paleta de cores escuras de alto contraste (*Dark Mode*), fontes tipográficas futuristas (`Orbitron` e `Rajdhani`) e efeitos de *glow* reativos que mudam de cor conforme o rank atingido pelo herói (de Ferro a Radiante).
