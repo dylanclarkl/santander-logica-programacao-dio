@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Classificação de Herói | DIO Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="system-container">
+        <header class="system-header">
+            <span class="system-tag">[ JANELA DO SISTEMA ]</span>
+            <h1>CLASSIFICADOR DE NÍVEL DE HERÓI</h1>
+            <p>Insira os dados da entidade para avaliar o rank atual.</p>
+        </header>
+
+        <main class="main-grid">
+            <!-- Painel de Entrada -->
+             <section class="card input-panel">
+                <h2>DADOS DO JOGADOR</h2>
+                <form id="heroForm">
+                    <div class="input-group">
+                        <label for="heroName">Nome do Herói</label>
+                        <input type="text" id="heroName" placeholder="Ex: Sung Jin-Woo" required autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="heroXp">Experiência (XP)</label>
+                        <input type="number" id="heroXp" placeholder="Ex: 8500" min="0" required>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn-primary">AVALIAR RANK</button>
+                        <button type="button" id="btnSimular" class="btn-secondary" title="Gera um herói aleatório">+ TREINO RÁPIDO</button>
+                    </div>
+                </form>
+             </section>
+
+            <!-- Painel de Resultado (Status Window) -->
+             <section class="card status-panel" id="statusPanel">
+                <div class="status-header">
+                    <span class="status-label">STATUS ATUAL</span>
+                    <span class="rank-badge" id="rankBadge">AGUARDANDO</span>
+                </div>
+                
+                <div class="result-message" id="resultMessage">
+                    Preencha os campo ao lado para iniciar a varredura de poder.
+                </div>
+
+                <div class="xp-bar-container">
+                    <div class="xp-info">
+                        <span>Progresso de Nível</span>
+                        <span id="xpCounter">0 XP</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+             </section>
+        </main>
+
+        <!-- Tabela de Referência & Histórico (Usa Laços de Repetição no JS) -->
+        <section class="card history-panel">
+            <div class="history-header">
+                <h2>REGISTRO DE AVALIAÇÕES</h2>
+                <button id="btnClear" class="btn-clear">Limpar</button>
+            </div>
+            <ul id="historyList" class="history-list">
+                <li class="empty-msg">Nenhum herói avaliado nesta sessão.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
