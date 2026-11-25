@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Rankeada - Rift Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="rift-container">
+        <header class="rift-header">
+            <span class="rift-tag">SUMMONER'S RIFT - RANKED</span>
+            <h1>Calculadora de Partidas Rankeadas</h1>
+            <p>Insira seu histórico de vitórias e derrotas para calcular o saldo e o nível</p>
+        </header>
+
+        <section class="card-painel">
+            <form id="ranked-form" class="form-grid">
+                <div class="input-group">
+                    <label for="vitorias">Vitórias</label>
+                    <input type="number" id="vitorias" name="vitorias" min=0 placeholder="Ex: 55" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="derrotas">Derrotas</label>
+                    <input type="number" id="derrotas" name="derrotas" min=0 placeholder="Ex: 20" required>
+                </div>
+
+                <button type="submit" class="btn-hextech">
+                    Calcular Rankeada
+                </button>
+            </form>
+
+            <div id="resultado-box" class="resultado-box" aria-live="polite">
+                <p id="mensagem-saida" class="mensagem-saida">
+                    Aguardando dados da partida...
+                </p>
+
+                <div class="badges-info">
+                    <span class="badge">Saldo: <strong id="saldo-valor">-</strong></span>
+                    <span class="badge">Nível: <strong id="nivel-valor">-</strong></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabela-nivel">
+            <h2>Tabela de Níveis do Desafio</h2>
+            <ul>
+                <li><span>&lt; 10 vitórias <span><strong>Ferro</strong></li>
+                <li><span>11 a 20 vitórias <span><strong>Bronze</strong></li>
+                <li><span>21 a 50 vitórias <span><strong>Prata</strong></li>
+                <li><span>51 a 80 vitórias <span><strong>Ouro</strong></li>
+                <li><span>81 a 90 vitórias <span><strong>Diamante</strong></li>
+                <li><span>91 a 100 vitórias <span><strong>Lendário</strong></li>
+                <li><span>&ge; 101 vitórias <span><strong>Imortal</strong></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
