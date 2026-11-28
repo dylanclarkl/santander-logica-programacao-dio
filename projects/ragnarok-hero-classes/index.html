@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragnarok - Hero Classes Arena (DIO Challenge)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ro-desktop">
+        <!-- Main Window: Character Creation & Status -->
+        <div class="ro-window char-window">
+            <div class="ro-title-bar">
+                <span class="ro-title-dot"></span>
+                <span class="ro-title-text">Character Info &amp; Battle</span>
+                <div class="ro-window-controls">
+                    <span>-</span>
+                    <span>x</span>
+                </div>
+            </div>
+
+            <div class="ro-window-body">
+                <!-- Left Column: Character Sprite Preview -->
+                <div class="char-preview-box">
+                    <div class="char-stage">
+                        <div id="char-avatar" class="char-sprite">⚔️</div>
+                        <div class="char-shadow"></div>
+                    </div>
+                    <div class="char-job-badge" id="preview-class">Class: Guerreiro</div>
+                </div>
+
+                <!-- Right Column: Attributes & Form -->
+                <form id="hero-form" class="char-stats-form">
+                    <div class="stat-group">
+                        <label for="hero-name">Name:</label>
+                        <input type="text" id="hero-name" placeholder="Ex: Steelheart" required maxlength="20">
+                    </div>
+
+                    <div class="stat-group">
+                        <label for="hero-age">Age:</label>
+                        <input type="number" id="hero-age" placeholder="Ex: 28" min="1" max="999" required>
+                    </div>
+
+                    <div class="stat-group">
+                        <label for="hero-type">Type (Class):</label>
+                        <select id="hero-type">
+                            <option value="guerreiro">Guerreiro (Swordman)</option>
+                            <option value="mago">Mago (Mage)</option>
+                            <option value="monge">Monge (Monk)</option>
+                            <option value="ninja">Ninja (Ninja)</option>
+                        </select>
+                    </div>
+
+                    <!-- Decorative Ragnarok status bars -->
+                    <div class="ro-bars">
+                        <div class="bar-row">
+                            <span>HP</span>
+                            <div class="bar-track"><div class="bar-fill hp-fill"></div></div>
+                            <small>100%</small>
+                        </div>
+                        <div class="bar-row">
+                            <span>SP</span>
+                            <div class="bar-track"><div class="bar-fill sp-fill"></div></div>
+                            <small>100%</small>
+                        </div>
+                    </div>
+
+                    <div class="ro-actions">
+                        <button type="submit" class="ro-btn ro-btn-primary">⚔️ Attack!</button>
+                        <button type="button" id="btn-party-attack" class="ro-btn">🔥 Party Attack</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Window: Classic Ragnarok Battle Log -->
+        <div class="ro-window chat-window">
+            <div class="ro-title-bar">
+                <span class="ro-title-dot"></span>
+                <span class="ro-title-text">Battle Log - Prontera Field</span>
+                <button type="button" id="btn-clear-log" class="ro-mini-btn">Clear</button>
+            </div>
+            <div id="battle-log" class="ro-chat-content">
+                <div class="log-system">[System] Welcome to the Hero Classes Arena! Fill in the stats above and click Attack.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
